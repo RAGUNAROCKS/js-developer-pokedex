@@ -10,8 +10,14 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.types = types
     pokemon.type = type1
 
-    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
-    return pokemon
+    //pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+    if(pokemon.number == 122){
+        pokemon.photo = `https://projectpokemon.org/images/normal-sprite/mr.mime.gif`
+    }else{
+        pokemon.photo = `https://projectpokemon.org/images/normal-sprite/${pokemon.name.replace("-", "_")}.gif`
+    }
+    
+    return pokemon  
 }
 
 pokeApi.getPokemonDetail = (pokemon) => {
