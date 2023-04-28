@@ -74,9 +74,12 @@
     color: #fff;
 }
 
-.pokemons :hover{
+.pokemons :hover, 
+.pagination :hover{
     background-color: #ccc;
 }
+
+
 
 @media screen and (min-width: 380px){
     .pokemons{
